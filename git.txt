@@ -1,0 +1,110 @@
+for git versions : https://www.kernel.org/piub/software/scm/git
+
+
+#git --version
+#git config --global user.name "user1"
+#git config --global user.email "user1@gmail.com"
+#git config --list
+
+creare ssh key 
+
+enable ssh agent
+
+#eval "$(ssh-agent -s)"
+
+add ssh key to ssh agent 
+
+#ssh-add ~/.ssh/id_rsa
+
+copy the ssh public key to github sshkeys -> settings -> ssh keys 
+
+test ssh key 
+
+ssh -T git@github.com
+
+go back to the git hub website and check the ssh key colur become green
+
+
+push and pull operations :
+
+create a folder  git-repo
+
+initilize the repo
+
+#git init
+
+git hub to hold files
+
+
+create a repo in github
+
+
+copy the ssh link from the clone or download from the repo
+
+git remote add origin git@github.com:apurisrikanth/first_repo.git
+
+
+to remove origin (if any cases)
+
+git remote rm origin
+
+
+-->git pull operation
+
+#git pull origin master
+
+
+
+
+  ls -la
+
+
+
+create a file in the repo
+
+
+   vi hello
+   ls -ltr
+  git add hello
+ git commit -m "first commit"
+ git push origin master
+
+
+
+
+ref link :  https://www.youtube.com/watch?v=0yRkRiQUgWo&spfreload=5
+
+
+
+
+git remote add origin git@github.com:apurisrikanth/first_repo.git  
+#git remote add origin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[root@server git-repo]# git add hello
+[root@server git-repo]# git commit -m "first commit"
+[master 0a50892] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello
+[root@server git-repo]# git push origin master
+Counting objects: 3, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:apurisrikanth/first_repo.git
+   86e1516..0a50892  master -> master
